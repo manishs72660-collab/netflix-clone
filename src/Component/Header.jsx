@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router";
 function Header(){
    const[moviedata,setmoviedata]=useState([]);
    useEffect(()=>{
@@ -14,13 +14,13 @@ function Header(){
    function Moviecard({ moviedata }) {
   return (
     <div className="w-44 cursor-pointer transform hover:scale-110 transition duration-300">
-
+     <Link to={`/movie/detail/${moviedata.id}`}>
       <img
         src={`https://image.tmdb.org/t/p/w500${moviedata.poster_path}`}
         alt={moviedata.title}
         className="rounded-lg"
       />
-
+</Link>
       <div className="mt-2">
         <p className="text-sm font-semibold line-clamp-1">
           {moviedata.title}
@@ -46,7 +46,6 @@ function Header(){
       src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
       alt="logo"
     />
-
     <div className="flex gap-4">
       <button className="border text-white px-4 py-1 rounded">
         English
@@ -82,14 +81,14 @@ function Header(){
       className="flex-1 px-4 py-3 bg-black/60 border border-gray-400 rounded text-white"
       required
     />
-
+<Link to="/movie">
     <button
       type="submit"
       className="bg-red-600 px-6 py-3 text-xl font-semibold rounded hover:bg-red-700 transition"
     >
       Get Started
     </button>
-
+</Link>
   </form>
     </div>
 
