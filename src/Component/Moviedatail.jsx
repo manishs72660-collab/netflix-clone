@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-
+import { Link } from "react-router";
 function Moviedetail() {
 
   const { id } = useParams();
@@ -52,11 +52,11 @@ function Moviedetail() {
           </p>
 
           <div className="flex gap-4 mt-6">
-
+            <Link to={`/movie/detail/${id}/play`}>
             <button className="bg-white text-black px-7 py-3 rounded font-semibold hover:bg-gray-200">
               ▶ Play
             </button>
-
+            </Link>
             <button className="bg-gray-700 px-7 py-3 rounded hover:bg-gray-600">
               + My List
             </button>
