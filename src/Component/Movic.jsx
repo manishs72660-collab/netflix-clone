@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router";
+import Navbar from "./nav";
 function Moviepage() {
   const[moviedata,setmoviedata]=useState([]);
   const [showdata,setshowdata]=useState([]);
@@ -57,19 +58,7 @@ function Moviecard({movieinfo}){
 }
   return (
     <div className="bg-gray-900 min-h-screen text-white">
-
       {/* Navbar */}
-      <div className="flex justify-between items-center px-10 py-6">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
-          className="w-36"
-        />
-
-        <button className="bg-white text-black px-5 py-2 rounded-full font-semibold">
-          Sign Out
-        </button>
-      </div>
-
       {/* Hero Section */}
       <div className="relative h-[85vh] max-w-[90%] container mx-auto">
 
