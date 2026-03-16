@@ -8,7 +8,7 @@ function SearchPage() {
     e.preventDefault();
 
     const res = await fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=3fd229c1647696e22bec8820123773e9&query=${query}`
+      `https://api.themoviedb.org/3/search/movie?api_key=&query=${query}`
     );
 
     const data = await res.json();

@@ -4,7 +4,7 @@ function Header(){
    const[moviedata,setmoviedata]=useState([]);
    useEffect(()=>{
       async function fetchdata() {
-        const response=await fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=3fd229c1647696e22bec8820123773e9")
+        const response=await fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=")
         const data=await response.json();
         setmoviedata(data.results);
     }

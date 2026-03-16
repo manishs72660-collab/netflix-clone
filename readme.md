@@ -1,4 +1,4 @@
-apikey of tmdb-3fd229c1647696e22bec8820123773e9;
+<!-- apikey of tmdb-; -->
 base_url=https://api.themoviedb.org/3/movie/popular?api_key=YOUR_API_KEY;
 
 Trending Movies-https://api.themoviedb.org/3/trending/movie/day?api_key=YOUR_API_KEY;

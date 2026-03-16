@@ -8,7 +8,7 @@ function MovieTrailer() {
   useEffect(() => {
     async function fetchTrailer() {
       const res = await fetch(
-        `https://api.themoviedb.org/3/movie/${id}/videos?api_key=3fd229c1647696e22bec8820123773e9`
+        `https://api.themoviedb.org/3/movie/${id}/videos?api_key=`
       );
 
       const data = await res.json();

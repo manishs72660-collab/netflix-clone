@@ -9,7 +9,7 @@ function Moviepage() {
   const[romancedata,setromancedata]=useState([]);
   useEffect(()=>{
     async function fetchdata(){
-        const response=await fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=3fd229c1647696e22bec8820123773e9");
+        const response=await fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=");
         const data=await response.json();
         setmoviedata(data.results)
     }
@@ -17,7 +17,7 @@ function Moviepage() {
   },[])
  useEffect(()=>{
    async function showcard() {
-       const response=await fetch("https://api.themoviedb.org/3/trending/tv/week?api_key=3fd229c1647696e22bec8820123773e9");
+       const response=await fetch("https://api.themoviedb.org/3/trending/tv/week?api_key=");
        const data=await response.json();
        setshowdata(data.results)
    }
@@ -25,7 +25,7 @@ function Moviepage() {
  },[])
  useEffect(()=>{
    async function showcard() {
-       const response=await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=3fd229c1647696e22bec8820123773e9");
+       const response=await fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=");
        const data=await response.json();
        settopdata(data.results)
    }
@@ -33,7 +33,7 @@ function Moviepage() {
  },[])
  useEffect(()=>{
    async function showcard() {
-       const response=await fetch("https://api.themoviedb.org/3/discover/movie?api_key=3fd229c1647696e22bec8820123773e9&with_genres=27");
+       const response=await fetch("https://api.themoviedb.org/3/discover/movie?api_key=&with_genres=27");
        const data=await response.json();
        sethorrordata(data.results)
    }
@@ -41,7 +41,7 @@ function Moviepage() {
  },[])
  useEffect(()=>{
    async function showcard() {
-       const response=await fetch("https://api.themoviedb.org/3/discover/movie?api_key=3fd229c1647696e22bec8820123773e9&with_genres=10749");
+       const response=await fetch("https://api.themoviedb.org/3/discover/movie?api_key=&with_genres=10749");
        const data=await response.json();
        setromancedata(data.results)
    }
